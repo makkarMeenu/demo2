@@ -1,0 +1,110 @@
+mutation registerUser($email: String!, $password: String!, $role: Float!) {
+  registerUser(authData: { email: $email, password: $password, role: $role }) {
+    statusCode
+    status
+    message
+    data {
+      ... on AuthResponseDto {
+        accessToken
+        user {
+          id
+          email
+        }
+      }
+    }
+    error
+  }
+}
+
+mutation authenticateUser($email: String!, $password: String!, $role: Float!) {
+  authenticateUser(
+    authData: { email: $email, password: $password, role: $role }
+  ) {
+    statusCode
+    status
+    message
+    data {
+      ... on AuthResponseDto {
+        accessToken
+        renewAccessToken
+        user {
+          id
+          email
+          avatar
+          phone_number
+          first_name
+        }
+      }
+    }
+    error
+  }
+}
+
+mutation RenewAccessToken {
+  renewAccessToken {
+    data {
+      accessToken
+    }
+    error
+    message
+    status
+    statusCode
+  }
+}
+
+mutation Update_users_by_pk(
+  $data: usersUpdateInput!
+  $where: usersWhereUniqueInput!
+) {
+  update_users_by_pk(data: $data, where: $where) {
+    error
+    message
+    status
+    statusCode
+    data {
+      email
+      phone_number
+      avatar
+      id
+      first_name
+    }
+  }
+}
+
+mutation ValidateOtp($data: validateOtpDto!) {
+  validateOtp(data: $data) {
+    data {
+      user {
+        phone_number
+        email
+        avatar
+        first_name
+        id
+      }
+      renewAccessToken
+      accessToken
+    }
+    error
+    message
+    status
+    statusCode
+  }
+}
+
+mutation InitiatePasswordReset($email: String!) {
+  initiatePasswordReset(email: $email) {
+    statusCode
+    status
+    message
+    error
+  }
+}
+
+mutation CompletePasswordReset($newPassword: String!) {
+  completePasswordReset(newPassword: $newPassword) {
+    error
+    message
+    status
+    statusCode
+  }
+}
