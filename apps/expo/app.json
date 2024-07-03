@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "App Launch Kit",
+    "slug": "app-launch-kit",
+    "owner": "applaunchkit-org",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "../../packages/assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "../../packages/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "bundleIdentifier": "com.applaunchkit.demoapp",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.applaunchkit.demoapp",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      ["expo-router"],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "enableGooglePay": false,
+          "bluetoothBackgroundMode": true,
+          "locationWhenInUsePermission": "Location access is required in order to accept payments.",
+          "bluetoothPeripheralPermission": "Bluetooth access is required in order to connect to supported bluetooth card readers.",
+          "bluetoothAlwaysUsagePermission": "This app uses Bluetooth to connect to supported card readers."
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosURLScheme": "com.googleusercontent.apps.339982569827-41u3c9a67997u48h0s3k0k3i61kaim6t"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a38b0c54-4bd7-46af-a029-9b97b9689d03"
+      }
+    },
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a38b0c54-4bd7-46af-a029-9b97b9689d03"
+    },
+    "runtimeVersion": "1.0.0"
+  }
+}

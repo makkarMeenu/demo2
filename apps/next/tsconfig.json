@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "jsxImportSource": "nativewind",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/assets/*": [
+        "./assets/*"
+      ],
+      "@/env": [
+        "env.js"
+      ],
+      "@/context/*": [
+        "./context/*"
+      ],
+      "@/lib/*": [
+        "./lib/*"
+      ],
+      "@/utils": [
+        "./utils.tsx"
+      ],
+      "@/helpers/*": [
+        "./helpers/*"
+      ],
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "../../packages/components/**/*.ts",
+    "../../packages/components/custom/auth/GoogleSignInButton.web.tsx",
+    "../../packages/components/custom/auth/SignInForm.tsx",
+    "../../packages/components/custom/auth/SignUpForm.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

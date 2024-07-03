@@ -1,0 +1,12 @@
+export const env = {
+  SITE_URL: process.env.SITE_URL ?? '',
+  SUPABASE_URL: process.env.SUPABASE_URL ?? '',
+  SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY ?? '',
+  GOOGLE_CLIENT_ID_WEB: process.env.GOOGLE_CLIENT_ID_WEB ?? '',
+  GOOGLE_CLIENT_ID_IOS: process.env.GOOGLE_CLIENT_ID_IOS ?? '',
+  GOOGLE_CLIENT_ID_ANDROID: process.env.GOOGLE_CLIENT_ID_ANDROID ?? '',
+  STRIPE_API_KEY: process.env.STRIPE_API_KEY ?? '',
+  STRIPE_WEBHOOK_SIGNING_SECRET:
+    process.env.STRIPE_WEBHOOK_SIGNING_SECRET ?? '',
+  STRIPE_PUBLISHABLE_KEY: process.env.STRIPE_PUBLISHABLE_KEY ?? '',
+};

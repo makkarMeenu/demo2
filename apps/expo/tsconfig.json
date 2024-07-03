@@ -1,0 +1,28 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "jsx": "react",
+    "strict": true,
+    "paths": {
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/assets/*": [
+        "./assets/*"
+      ],
+      "@/utils": [
+        "./utils.tsx"
+      ],
+      "@/lib/*": [
+        "./lib/*"
+      ],
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "../../packages/components/custom/auth/GoogleSignInButton.tsx"
+  ]
+}
